@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Conselho",
+      "hasCanvas": false,
+      "bodyTextLen": 1014,
+      "bodyTextHash": "3f4f7cd8aa5d59c33186a1aa92ac50ea27c2f86638605747322a2159507f2e86",
+      "bodyTextPrefix": "A câmara está ociosa. Câmara de raciocínio Conselho Nada é trein",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Conselho",
+      "hasCanvas": false,
+      "bodyTextLen": 1001,
+      "bodyTextHash": "31ad2980a4aa4a2945497a7744bff1c05b15740b135babef20e80d6329ce678b",
+      "bodyTextPrefix": "A câmara está ociosa. Câmara de raciocínio Conselho Nada é trein",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --font-sans: "Instrument Sans", system-ui, sans-serif;
+
+  --color-canvas: #0c0e10;
+  --color-panel: #14171b;
+  --color-raised: #1c2026;
+  --color-ink: #eceae6;
+  --color-mute: #a3a39c;
+  --color-faint: #8d8d86;
+  --color-line: #2a2f36;
+  --color-paper: #e8e4db;
+  --color-inkbtn: #14161a;
+  --color-hold: #8aa892;
+  --color-warn: #c46a5a;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+}
+
+:root {
+  --ease-smooth-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-quick: 150ms;
+  --motion-fast: 250ms;
+}
+
+@layer base {
+  html {
+    background: var(--color-canvas);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    min-height: 100vh;
+    background: var(--color-canvas);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--color-paper);
+    color: var(--color-inkbtn);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-paper);
+    outline-offset: 2px;
+  }
+}
+
+@keyframes seat-bar {
+  from {
+    transform: scaleX(0.18);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.seat-live {
+  animation: seat-bar 1.15s var(--ease-smooth-out) infinite alternate;
+  transform-origin: left center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .seat-live {
+    animation: none;
+    transform: none;
+    opacity: 0.75;
+  }
+}
+
+.history-scroll {
+  max-height: 70vh;
+}
+
+.dialog-panel {
+  width: min(100% - 2rem, 32rem);
+}
+
+.dialog-panel::backdrop {
+  background: color-mix(in oklab, var(--color-canvas) 40%, #000);
+}
